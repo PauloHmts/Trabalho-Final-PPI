@@ -21,7 +21,9 @@ app.use(cookieParser())
 
 app.use(express.urlencoded({ extended: true }));
 
-app.use(express.static('./pages/public'))
+app.use(express.static(path.join(process.cwd(), 'pages/public')));
+
+import path from 'path';
 
 const porta = 3000
 const host = '0.0.0.0'
